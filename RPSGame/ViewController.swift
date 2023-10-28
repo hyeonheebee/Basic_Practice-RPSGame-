@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    // 속성
+    // 속성 / 오브젝트들이 변수와 연결되어있음
     @IBOutlet weak var mainLabel: UILabel!
     
     @IBOutlet weak var comImageView: UIImageView!
@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var comChoiceLabel: UILabel!
     @IBOutlet weak var myChoiceLabel: UILabel!
+    
+    // 데이터 저장을 위한 변수 만들기, 내가 만든 타입을 사용, 속성(케이스)과 연결
+    // 옵셔널 타입가능성 => 강제추출연산자 ! 사용
 
     var myChoice: Rps = Rps.rock
     var comChoice: Rps = Rps(rawValue: Int.random(in: 0...2))!
@@ -36,10 +39,13 @@ class ViewController: UIViewController {
     @IBAction func rpsButtonTapped(_ sender: UIButton) {
         
         // 가위바위보를 선택해서 선택한 정보를 저장한다
+        // 가드let바인딩 참조하기
         // guard let title = sender.currentTitle else { return }
          
-        // 옵셔널타입 강제추출연산자 사용
+        // currentTitle Stirng? 으로 옵셔널타입 강제추출연산자 ! 사용
         let title = sender.currentTitle!
+        
+        // title 변수에는 string 이 들어옴 => 문자열이 있으므로 default 문이 필요함 (모든케이스를 다뤄줄것)
         switch title {
         case "가위":
             myChoice = Rps.scissors
@@ -56,9 +62,10 @@ class ViewController: UIViewController {
     
    
     // 함수 이름을 임의로 바꿔주면 안된다..
-    
+    // 실제로 버튼이 선택되고 눌렸을때 함수
     @IBAction func selectButtonTapped(_ sender: UIButton) {
         
+        // enum 타입에 대한 switch 문 이므로 default 처리 필요없음(당연함) 
         switch comChoice {
         case .rock:
             comImageView.image = #imageLiteral(resourceName: "rock")

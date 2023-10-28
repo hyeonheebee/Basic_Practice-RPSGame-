@@ -7,7 +7,7 @@
 
 import Foundation
 
-// 원시값(raw value)설정
+// 원시값(raw value)설정 // 직접 타입만들어서 사용 
 enum Rps: Int {
     case rock //0
     case paper //1
