@@ -14,6 +14,7 @@
 		672EFE1F2AB5F0FA00C9801C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672EFE1E2AB5F0FA00C9801C /* Assets.xcassets */; };
 		672EFE222AB5F0FA00C9801C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672EFE202AB5F0FA00C9801C /* LaunchScreen.storyboard */; };
 		672EFE2A2AB5FB0A00C9801C /* Rps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672EFE292AB5FB0A00C9801C /* Rps.swift */; };
+		67F4D7472AF7DA8C007B0026 /* RPSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F4D7462AF7DA8C007B0026 /* RPSManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		672EFE212AB5F0FA00C9801C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		672EFE232AB5F0FA00C9801C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		672EFE292AB5FB0A00C9801C /* Rps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rps.swift; sourceTree = "<group>"; };
+		67F4D7462AF7DA8C007B0026 /* RPSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,41 @@
 		672EFE142AB5F0F900C9801C /* RPSGame */ = {
 			isa = PBXGroup;
 			children = (
+				67F4D7452AF7DA5C007B0026 /* Views */,
+				67F4D7442AF7DA51007B0026 /* Controllers */,
+				67F4D7432AF7DA49007B0026 /* Models */,
 				672EFE152AB5F0F900C9801C /* AppDelegate.swift */,
 				672EFE172AB5F0F900C9801C /* SceneDelegate.swift */,
-				672EFE292AB5FB0A00C9801C /* Rps.swift */,
-				672EFE192AB5F0F900C9801C /* ViewController.swift */,
-				672EFE1B2AB5F0F900C9801C /* Main.storyboard */,
 				672EFE1E2AB5F0FA00C9801C /* Assets.xcassets */,
 				672EFE202AB5F0FA00C9801C /* LaunchScreen.storyboard */,
 				672EFE232AB5F0FA00C9801C /* Info.plist */,
 			);
 			path = RPSGame;
+			sourceTree = "<group>";
+		};
+		67F4D7432AF7DA49007B0026 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				67F4D7462AF7DA8C007B0026 /* RPSManager.swift */,
+				672EFE292AB5FB0A00C9801C /* Rps.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		67F4D7442AF7DA51007B0026 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				672EFE192AB5F0F900C9801C /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		67F4D7452AF7DA5C007B0026 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				672EFE1B2AB5F0F900C9801C /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +172,7 @@
 				672EFE2A2AB5FB0A00C9801C /* Rps.swift in Sources */,
 				672EFE162AB5F0F900C9801C /* AppDelegate.swift in Sources */,
 				672EFE182AB5F0F900C9801C /* SceneDelegate.swift in Sources */,
+				67F4D7472AF7DA8C007B0026 /* RPSManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
